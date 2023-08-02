@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_1/bottom_bar.dart';
+import 'package:task_1/screens/first_service.dart';
+import 'package:task_1/screens/second_api.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -79,31 +81,39 @@ class HomePage extends StatelessWidget {
                       width: 160,
                       top: 164,
                       left: 16,
-                      child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            border:
-                                Border.all(width: 1, color: Color(0xFF598BED))),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Image.asset(
-                              "assets/Book-mark.png",
-                              width: 24,
-                              height: 24,
-                            ),
-                            SizedBox(
-                              width: 14,
-                            ),
-                            Text(
-                              'Programs',
-                              style: GoogleFonts.inter(
-                                  textStyle: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w600,
-                                      color: Color(0xFF598BED))),
-                            ),
-                          ],
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FirstApiPage()));
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              border: Border.all(
+                                  width: 1, color: Color(0xFF598BED))),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                "assets/Book-mark.png",
+                                width: 24,
+                                height: 24,
+                              ),
+                              SizedBox(
+                                width: 14,
+                              ),
+                              Text(
+                                'Programs',
+                                style: GoogleFonts.inter(
+                                    textStyle: TextStyle(
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xFF598BED))),
+                              ),
+                            ],
+                          ),
                         ),
                       )),
                   // ---------------------------box-2--------------------------------------------
@@ -116,7 +126,7 @@ class HomePage extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border:
-                                Border.all(width: 1, color: Color(0xFF598BED))),
+                                Border.all(width: 1, color: const Color(0xFF598BED))),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -125,7 +135,7 @@ class HomePage extends StatelessWidget {
                               width: 20,
                               height: 20,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 28,
                             ),
                             Text(
@@ -208,7 +218,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-// ----------------------------programs for you section---------------------------------------------
+            // ----------------------------programs for you section---------------------------------------------
             SizedBox(
               height: 24,
             ),
@@ -225,14 +235,22 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   width: 105,
                 ),
-                Image.asset(
-                  "assets/view.png",
-                  width: 70,
-                  height: 24,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => FirstApiPage()));
+                  },
+                  child: Image.asset(
+                    "assets/view.png",
+                    width: 70,
+                    height: 24,
+                  ),
                 ),
               ],
             ),
-//-----------------------------Section 1-------------------------------------------------------------
+            //-----------------------------Section 1-------------------------------------------------------------
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -362,7 +380,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
             ),
-// -------------------------------------events and experience section ----------------------------------------------
+            // -------------------------------------events and experience section ----------------------------------------------
             SizedBox(
               height: 20,
             ),
@@ -386,7 +404,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-//---------------------------------------section 2-----------------------------------------------------------------------
+            //---------------------------------------section 2-----------------------------------------------------------------------
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -547,14 +565,22 @@ class HomePage extends StatelessWidget {
                 SizedBox(
                   width: 119,
                 ),
-                Image.asset(
-                  "assets/view.png",
-                  width: 70,
-                  height: 24,
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SecondApiPage()));
+                  },
+                  child: Image.asset(
+                    "assets/view.png",
+                    width: 70,
+                    height: 24,
+                  ),
                 ),
               ],
             ),
-// ------------------------------------------section 3 -------------------------------------------------------------------
+            // ------------------------------------------section 3 -------------------------------------------------------------------
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
