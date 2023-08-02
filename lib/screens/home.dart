@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_1/bottom_bar.dart';
-import 'package:task_1/screens/first_service.dart';
+import 'package:task_1/screens/first_api.dart';
 import 'package:task_1/screens/second_api.dart';
 
 class HomePage extends StatelessWidget {
